@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_custom_tabs/flutter_custom_tabs.dart' as ct;
 import 'package:go_router/go_router.dart';
 import 'package:kitchenowl/cubits/auth_cubit.dart';
 import 'package:kitchenowl/kitchenowl.dart';
@@ -39,6 +40,7 @@ class _LoginRedirectPageState extends State<LoginRedirectPage> {
         width: null,
       ),
     );
+    ct.closeAllIfPossible();
     if (isLinkAttempt) {
       context.go("/settings/account");
     }
